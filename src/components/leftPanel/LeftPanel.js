@@ -9,8 +9,6 @@ import "./leftPanel.scss";
 import styled from "@emotion/styled";
 import Report from "../../pages/Report/Report.js";
 import Analytics from "../../pages/analytics/Analytics.js";
-import Office from "../../pages/office/Office.js";
-import Employee from "../../pages/employee/Employee.js";
 import {useState, useEffect} from "react";
 // import UserService from "../../API/UserService";
 
@@ -126,14 +124,8 @@ const LeftPanel = () => {
                                 onChange={handleChange}
                                 sx={{".MuiTabs-indicator": {display: "none"}}}
                             >
-                                <DTabs
-                                    index={0}
-                                    label="Удмуртская республика"
-                                    {...a11yProps(0)}
-                                />
-                                <DTabs index={1} label="Офис МФЦ" {...a11yProps(1)} />
-                                <DTabs index={2} label="Аналитика" {...a11yProps(2)} />
-                                <DTabs index={3} label="Отчет по сотрудникам" {...a11yProps(3)} />
+                                <DTabs index={0} label="Отчет" {...a11yProps(0)} />
+                                <DTabs index={1} label="Аналитика" {...a11yProps(1)} />
                             </Tabs>
                         </div>
                         <div className="line bottom"></div>
@@ -152,16 +144,9 @@ const LeftPanel = () => {
                         >
                             <TabPanel sx={{padding: 0}} value={value} index={0}>
                                 <Report></Report>
-                                {/* <AddEmployee></AddEmployee> */}
                             </TabPanel>
                             <TabPanel value={value} index={1}>
-                                <Office></Office>
-                            </TabPanel>
-                            <TabPanel value={value} index={2}>
                                 <Analytics></Analytics>
-                            </TabPanel>
-                            <TabPanel value={value} index={3}>
-                                <Employee></Employee>
                             </TabPanel>
                         </Box>
                     </div>

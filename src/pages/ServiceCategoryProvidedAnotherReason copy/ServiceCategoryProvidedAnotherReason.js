@@ -18,8 +18,8 @@ const ServiceCategoryProvidedAnotherReason = function() {
         Укажите причину, 
         по которой услуга не была<br/> оказана
         </p>
-        <Input className={"SCPA-inp"}></Input>
-        <Button className={"SCPA-btn"}>ДРУГАЯ ПРИЧИНА</Button>
+        <textarea className="SCPA-textarea"></textarea>
+        <Button className={"SCPA-btn"}>ОТПРАВИТЬ</Button>
         </div>
       </div>
     </div>

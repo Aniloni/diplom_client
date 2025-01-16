@@ -15,39 +15,39 @@ const LoginEmployee = function () {
   const handleClick = () => {
     navigate('/EntitySelection'); 
   };
-  const fetchDatas = () =>{
-    var login = document.getElementById('user_login').value;
-    var  user;
-    const get = async () => {
-        try {
-        const response = await axios.post('http://92.39.211.204:1114/api/v1/user/'+login,
-            {
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json",
-                },
-            }
+  // const fetchDatas = () =>{
+  //   var login = document.getElementById('user_login').value;
+  //   var  user;
+  //   const get = async () => {
+  //       try {
+  //       const response = await axios.post('http://92.39.211.204:1114/api/v1/user/'+login,
+  //           {
+  //               headers: {
+  //                   "Content-Type": "application/json",
+  //                   Accept: "application/json",
+  //               },
+  //           }
             
-        );
-        if(response.data.success == false) alert((response.data.data.ErrorDesc))
-        else{
-            if(response.data.data.length > 0){
-              response.data.data.forEach(element => {
-                user = new User(element.snils, element.first_name, element.sur_name, 
-                element.last_name, element.phone, element.role, element.id_office)
-              });
-              document.getElementById('user_btn').onclick = handleClick;
-            }
-            else{
-              alert('Введен неверный СНИЛС')
-            }
-        }
-        } catch (error) {
-        console.error('Ошибка при выполнении запроса:', error);
-        }
-    };
-    get();
-  }
+  //       );
+  //       if(response.data.success == false) alert((response.data.data.ErrorDesc))
+  //       else{
+  //           if(response.data.data.length > 0){
+  //             response.data.data.forEach(element => {
+  //               user = new User(element.snils, element.first_name, element.sur_name, 
+  //               element.last_name, element.phone, element.role, element.id_office)
+  //             });
+  //             document.getElementById('user_btn').onclick = handleClick;
+  //           }
+  //           else{
+  //             alert('Введен неверный СНИЛС')
+  //           }
+  //       }
+  //       } catch (error) {
+  //       console.error('Ошибка при выполнении запроса:', error);
+  //       }
+  //   };
+  //   get();
+  // }
   return (
     <div className="section">
       {/* className="section" применен flex для выравниван я по центру */}
@@ -63,7 +63,7 @@ const LoginEmployee = function () {
             {" "}
             <Input id={"user_login"} label={"ИНН / СНИЛС / ID"}></Input>{" "}
           </div>
-          <Button id={"user_btn"} onClick={fetchDatas}>ВОЙТИ</Button>
+          <Button id={"user_btn"} onClick={handleClick}>ВОЙТИ</Button>
         </div>
       </div>
     </div>

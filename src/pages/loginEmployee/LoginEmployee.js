@@ -13,7 +13,7 @@ import axios from 'axios'
 const LoginEmployee = function () {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate('/EntitySelection'); 
+    navigate('/ChoiceActivity'); 
   };
   // const fetchDatas = () =>{
   //   var login = document.getElementById('user_login').value;

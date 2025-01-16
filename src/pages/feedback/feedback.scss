@@ -28,3 +28,21 @@ text-align: center;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+.feedback-textarea {
+    margin-top: 33px;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    height: 200px;
+    padding: 12px 40px;
+    font-weight: 700;
+    border-radius: 20px;
+    background-color: var(--brownOpacity10);
+    color: var(--brownOpacity60);
+    resize: none;
+  }
+  
+  .feedback-textarea:focus {
+    outline: none;
+  }

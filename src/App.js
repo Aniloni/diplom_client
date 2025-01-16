@@ -1,8 +1,11 @@
 import "./generalStyles.scss";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import EntitySelection from "./pages/entitySelection/EntitySelection";
+import ChoiceActivity from "./pages/choiceActivity/ChoiceActivity";
+import LeftPanel from "./components/leftPanel/LeftPanel";
 import LoginEmployee from "./pages/loginEmployee/LoginEmployee";
 import PersonalDataInput from "./pages/personalDataInput/PersonalDataInput";
+import CompanyDataInput from "./pages/companyDataInput/CompanyDataInput";
 import ServiceCategorySelection from "./pages/serviceCategorySelection/ServiceCategorySelection";
 import ServiceSelection from "./pages/serviceSelection/ServiceSelection";
 import ServiceSubmit from "./pages/serviceSubmit/ServiceSubmit";
@@ -17,8 +20,11 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<LoginEmployee />} />
+          <Route path="/ChoiceActivity" element={<ChoiceActivity />} />
+          <Route path="/LeftPanel" element={<LeftPanel />} />
           <Route path="/EntitySelection" element={<EntitySelection />} />
           <Route path="/PersonalDataInput" element={<PersonalDataInput />} />
+          <Route path="/CompanyDataInput" element={<CompanyDataInput />} />
           <Route
             path="/ServiceCategorySelection"
             element={<ServiceCategorySelection />}

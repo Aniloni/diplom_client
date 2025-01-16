@@ -1,5 +1,5 @@
-import arrowRight from '../../img/arrowRight.svg'
-import arrowLeft from '../../img/arrowLeft.svg'
+import arrowRight from '../../imgMFC/arrowRight.svg'
+import arrowLeft from '../../imgMFC/arrowLeft.svg'
 import React, { useState} from 'react';
 import './Calendar.scss'
 

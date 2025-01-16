@@ -83,7 +83,7 @@ const Feedback = function() {
         <InputRadio name="sm-1" value="4" img ={smile4}></InputRadio>
         <InputRadio name="sm-1" value="5" img ={smile5}></InputRadio>
         </div>
-        <Input className={"input-big"}></Input>
+        <textarea className="feedback-textarea"></textarea>
         <Button onClick={fetchDatas} type="button">ОТПРАВИТЬ</Button>
         </form>
         </div>

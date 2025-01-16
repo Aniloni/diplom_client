@@ -46,7 +46,7 @@ import Header from "../../components/header/Header";
 import Search from "../../components/search/Search";
 import { cardsText } from "../../data/cards";
 import ServiceCard from "../../components/serviceCard/ServiceCard";
-import "./ServiceSelection.scss"
+import "./ServiceSelection.scss";
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -55,19 +55,26 @@ const ServiceSelection = function () {
   const navigate = useNavigate();
 
   const handleClick = (cardText) => {
-    navigate('/feedback', { state: { ServiceCardid: cardText } });
+    // Передаем данные в state для следующей страницы
+    navigate('/ServiceSubmit', { state: { selectedService: cardText } });
   };
 
-  const filteredList = cardsText.filter(card => card.cardText.toLowerCase().includes(searchText.toLowerCase()));
+  const filteredList = cardsText.filter(card =>
+    card.cardText.toLowerCase().includes(searchText.toLowerCase())
+  );
 
   return (
     <div className="wrapperSecond">
       <Header />
-      <Search searchText={searchText} setSearchText={setSearchText}/>
-      <ButtonBrown text="Инструкция по услугам" onClick={() => navigate('/ServiceSubmit')}/>
+      <Search searchText={searchText} setSearchText={setSearchText} />
+      <ButtonBrown text="Инструкция по услугам" onClick={() => navigate('/ServiceSubmit')} />
       <div className="cardList">
         {filteredList.map((card) => (
-          <ServiceCard key={card.cardText} cardText={card.cardText} onClick={handleClick} />
+          <ServiceCard className='ServiceCard'
+            key={card.cardText}
+            cardText={card.cardText}
+            onClick={() => handleClick(card.cardText)} // При клике вызываем handleClick с текстом карточки
+          />
         ))}
       </div>
       <DigitalSourses />

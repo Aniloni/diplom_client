@@ -4,3 +4,13 @@
     justify-content: space-between;
     margin-top: 25px;
 }
+.exit, .account{
+    cursor: pointer;
+}
+.exit:hover{
+    text-decoration: underline;
+}
+
+.account:hover{
+    text-decoration: underline;
+}

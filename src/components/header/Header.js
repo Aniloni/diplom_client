@@ -22,7 +22,7 @@ const Header = function () {
             <img src={loginIcon} alt="loginIcon" />
             <p>{}</p>
           </div>
-          <p>Выйти</p>
+          <p className="exit">Выйти</p>
         </div>
       </header>
     </>

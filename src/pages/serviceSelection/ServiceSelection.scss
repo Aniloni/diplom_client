@@ -1,3 +1,11 @@
 .cardList{
     margin-top: 77px;
 }
+.ServiceCard{
+    cursor: pointer;
+}
+
+.ServiceCard:hover{
+    color: var(--beigeOpacity60);
+    text-decoration: underline;
+}

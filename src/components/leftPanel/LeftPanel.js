@@ -115,21 +115,22 @@ const LeftPanel = () => {
                             <p>{user.last_name}</p>
                             <p>{user.sur_name}</p>
                         </div>
-
-                        <div className="tabs-group">
-                            <Tabs
-                                orientation="vertical"
-                                variant="scrollable"
-                                value={value}
-                                onChange={handleChange}
-                                sx={{".MuiTabs-indicator": {display: "none"}}}
-                            >
-                                <DTabs index={0} label="Отчет" {...a11yProps(0)} />
-                                <DTabs index={1} label="Аналитика" {...a11yProps(1)} />
-                            </Tabs>
+                        <div className="panel-container">
+                            <div className="tabs-group">
+                                <Tabs
+                                    orientation="vertical"
+                                    variant="scrollable"
+                                    value={value}
+                                    onChange={handleChange}
+                                    sx={{".MuiTabs-indicator": {display: "none"}}}
+                                >
+                                    <DTabs index={0} label="Отчет" {...a11yProps(0)} />
+                                    <DTabs index={1} label="Аналитика" {...a11yProps(1)} />
+                                </Tabs>
+                            </div>
+                            <div className="line bottom"></div>
+                            <button className="logout-button">Выйти</button>
                         </div>
-                        <div className="line bottom"></div>
-                        <button className="logout-button">Выйти</button>
                     </div>
                     <div>
                         <Box

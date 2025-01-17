@@ -17,8 +17,8 @@ import { useNavigate } from 'react-router-dom';
       <Header/>
       <Search />
       <div className="btnsServisesAndMobile">
-        <ButtonBrown onClick={handleClick}  text="Инструкция по услугам" />
-        <ButtonBrown text="Оказание услуги с телефона заявителя" />
+        <ButtonBrown onClick={handleClick} text="Инструкция по услугам" />
+        <ButtonBrown onClick={handleClick} text="Оказание услуги с телефона заявителя" />
       </div>
       <Categories />
       <DigitalSourses />

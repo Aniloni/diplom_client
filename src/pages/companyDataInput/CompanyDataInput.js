@@ -2,7 +2,7 @@ import HeaderMini from "../../components/header/HeaderMini";
 import Button from '../../components/buttons/Button';
 import "./../../generalStyles.scss";
 import Input from "../../components/inputs/input/input";
-import "../personalDataInput/PersonalDataInput.scss";
+import "../companyDataInput/CompanyDataInput.scss";
 import AccountEntry from "../../components/accountEntry/AccountEntry";
 import Back from './../../imgMFC/Back.svg'
 import Info from './../../imgMFC/Info.svg'
@@ -14,6 +14,9 @@ const CompanyDataInput = function() {
   const handleClick = () => {
     navigate('/ServiceCategorySelection'); 
   };
+  const backClick = ()=>{
+    navigate('/EntitySelection');
+  };
   return (
     <div className="section"> 
     {/* className="section" применен flex для выравниван я по центру */}
@@ -24,13 +27,13 @@ const CompanyDataInput = function() {
         <AccountEntry/>
         <div className="img-info"> <img src={Info} alt="info" /> </div>
         <div className="container-personalDataInput">
-            <div className="img-back"> <img src={Back} alt="back" /> </div>
+            <div className="img-back"> <img src={Back} alt="back" onClick={backClick} /> </div>
             <div className="text-personalDataInput">
                 Согласие на обработку<br/>персональных данных<br/>юридического лица
             </div>
         </div>
         <div className="input-personalDataInput"> 
-            <Input label={<>Название юр. лица<span className="red">*</span></>}/>
+            <Input className={'in-2'} label={<>Название юр. лица<span className="red">*</span></>}/>
             <label className="lable-personalDataInput">
                 <input type="checkbox" required/> Я согласен(а) на <a href="#">обработку персональных данных</a>
             </label>

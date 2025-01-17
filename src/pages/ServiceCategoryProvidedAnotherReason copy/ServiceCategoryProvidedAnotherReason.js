@@ -4,8 +4,13 @@ import "./../../generalStyles.scss";
 import "./ServiceCategoryProvidedAnotherReason.scss"
 import AccountEntry from "../../components/accountEntry/AccountEntry";
 import Input from "../../components/inputs/input/input";
+import { useNavigate } from 'react-router-dom';
 
 const ServiceCategoryProvidedAnotherReason = function() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/ChoiceActivity'); 
+  };
   return (
     <div className="section"> 
     {/* className="section" применен flex для выравниван я по центру */}
@@ -19,7 +24,7 @@ const ServiceCategoryProvidedAnotherReason = function() {
         по которой услуга не была<br/> оказана
         </p>
         <textarea className="SCPA-textarea"></textarea>
-        <Button className={"SCPA-btn"}>ОТПРАВИТЬ</Button>
+        <Button onClick={handleClick} className={"SCPA-btn"}>ОТПРАВИТЬ</Button>
         </div>
       </div>
     </div>

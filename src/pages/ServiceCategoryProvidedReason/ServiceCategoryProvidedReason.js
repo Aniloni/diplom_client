@@ -8,7 +8,10 @@ import { useNavigate } from 'react-router-dom';
 
 const ServiceCategoryProvidedReason = function() {
   const navigate = useNavigate();
-  const handleClick = () => {
+  const handleClick1 = () => {
+    navigate('/ChoiceActivity'); 
+  };
+  const handleClick2 = () => {
     navigate('/ServiceCategoryProvidedAnotherReason'); 
   };
   return (
@@ -23,8 +26,8 @@ const ServiceCategoryProvidedReason = function() {
         Укажите причину, 
         по которой услуга не была<br/> оказана
         </p>
-        <Button className={"SCPR-btn-1"}>НЕТ ДОКУМЕНТОВ</Button>
-        <Button onClick={handleClick} className={"SCPR-btn"}>ДРУГАЯ ПРИЧИНА</Button>
+        <Button onClick={handleClick1} className={"SCPR-btn-1"}>НЕТ ДОКУМЕНТОВ</Button>
+        <Button onClick={handleClick2} className={"SCPR-btn"}>ДРУГАЯ ПРИЧИНА</Button>
         </div>
       </div>
     </div>

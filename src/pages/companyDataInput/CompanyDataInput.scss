@@ -17,10 +17,6 @@
     padding-top: 30px;
 }
 
-.img-back {
-    padding-left: 20px;
-}
-
 .red {
     color: var(--attentionContent);
 }
@@ -105,3 +101,11 @@ input[type="checkbox"] {
 	border-radius: 20px;
 }
 
+.img-back{
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.img-back:hover{
+    opacity: 0.6;
+}

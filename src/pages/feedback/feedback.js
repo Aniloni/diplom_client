@@ -19,45 +19,45 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 const Feedback = function() {
     const navigate = useNavigate();
-    const location = useLocation();
-    const { ServiceCardid } = location.state || {};
+    //const location = useLocation();
+    //const { ServiceCardid } = location.state || {};
     const handleClick = () => {
     navigate('/ServiceCategoryProvidedReason'); 
   };
-  console.log(ServiceCardid);
-  const fetchDatas = () =>{
-    // var login = document.getElementById('user_login').value;
-    // var  user;
-    const get = async () => {
-        try {
-        const response = await axios.put('/api/v1/provision_categories/'+ServiceCardid,
-            {
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json",
-                },
-            }
+  //console.log(ServiceCardid);
+  // const fetchDatas = () =>{
+  //   // var login = document.getElementById('user_login').value;
+  //   // var  user;
+  //   const get = async () => {
+  //       try {
+  //       const response = await axios.put('/api/v1/provision_categories/'+ServiceCardid,
+  //           {
+  //               headers: {
+  //                   "Content-Type": "application/json",
+  //                   Accept: "application/json",
+  //               },
+  //           }
             
-        );
-        if(response.data.success == false) alert((response.data.data.ErrorDesc))
-        else{
-            if(response.data.data.length > 0){
-              response.data.data.forEach(element => {
-                // user = new User(element.snils, element.first_name, element.sur_name, 
-                // element.last_name, element.phone, element.role, element.id_office)
-              });
-              document.getElementById('user_btn').onclick = handleClick;
-            }
-            else{
-              alert('Введен неверный СНИЛС')
-            }
-        }
-        } catch (error) {
-        console.error('Ошибка при выполнении запроса:', error);
-        }
-    };
-    get();
-  }
+  //       );
+  //       if(response.data.success == false) alert((response.data.data.ErrorDesc))
+  //       else{
+  //           if(response.data.data.length > 0){
+  //             response.data.data.forEach(element => {
+  //               // user = new User(element.snils, element.first_name, element.sur_name, 
+  //               // element.last_name, element.phone, element.role, element.id_office)
+  //             });
+  //             document.getElementById('user_btn').onclick = handleClick;
+  //           }
+  //           else{
+  //             alert('Введен неверный СНИЛС')
+  //           }
+  //       }
+  //       } catch (error) {
+  //       console.error('Ошибка при выполнении запроса:', error);
+  //       }
+  //   };
+  //   get();
+  // }
   return (
     <div className="section"> 
     {/* className="section" применен flex для выравниван я по центру */}
@@ -84,7 +84,7 @@ const Feedback = function() {
         <InputRadio name="sm-1" value="5" img ={smile5}></InputRadio>
         </div>
         <textarea className="feedback-textarea"></textarea>
-        <Button onClick={fetchDatas} type="button">ОТПРАВИТЬ</Button>
+        <Button onClick={handleClick} type="button">ОТПРАВИТЬ</Button>
         </form>
         </div>
       </div>

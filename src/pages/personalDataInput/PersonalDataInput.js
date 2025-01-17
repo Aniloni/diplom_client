@@ -17,6 +17,9 @@ const PersonalDataInput = function() {
   const handleClick = () => {
     navigate('/ServiceCategorySelection'); 
   };
+  const backClick = ()=>{
+    navigate('/EntitySelection');
+  };
     const [alignment, setAlignment] = React.useState('phone');
   
     const handleChange = (event, newAlignment) => {
@@ -35,7 +38,7 @@ const PersonalDataInput = function() {
         <AccountEntry/>
         <div className="img-info"> <img src={Info} alt="info" /> </div>
         <div className="container-personalDataInput">
-            <div className="img-back"> <img src={Back} alt="back" /> </div>
+            <div className="img-back"> <img src={Back} alt="back" onClick={backClick} /> </div>
             <div className="text-personalDataInput">
                 Согласие на обработку<br/>персональных данных<br/>физического лица
             </div>

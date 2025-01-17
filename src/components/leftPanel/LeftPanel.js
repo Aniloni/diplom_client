@@ -108,14 +108,16 @@ const LeftPanel = () => {
                 {/* ограничивающий контейнер 1280px */}
                 <div className="lp-container">
                     <div className="leftPanel tab-panel-scroll">
+                        <div>
+
                         <img className="leftPanel-logo" src={logo} alt="logo"/>
                         <div className="line"></div>
                         <div className="user-info">
-                            <p>{user.first_name}</p>
-                            <p>{user.last_name}</p>
-                            <p>{user.sur_name}</p>
+                            <p>Иванова</p>
+                            <p>Дарья</p>
+                            <p>Витальевна</p>
                         </div>
-                        <div className="panel-container">
+                        </div>
                             <div className="tabs-group">
                                 <Tabs
                                     orientation="vertical"
@@ -128,6 +130,7 @@ const LeftPanel = () => {
                                     <DTabs index={1} label="Аналитика" {...a11yProps(1)} />
                                 </Tabs>
                             </div>
+                        <div className="panel-container">
                             <div className="line bottom"></div>
                             <button className="logout-button">Выйти</button>
                         </div>

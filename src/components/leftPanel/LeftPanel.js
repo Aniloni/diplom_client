@@ -104,7 +104,7 @@ const LeftPanel = () => {
 
     return (
         <div className="wrapper">
-            <div className="container">
+            <div className="container-left">
                 {/* ограничивающий контейнер 1280px */}
                 <div className="lp-container">
                     <div className="leftPanel tab-panel-scroll">

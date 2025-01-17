@@ -13,7 +13,18 @@
     --lightGreenOpacity60: rgba(152, 190, 13, 0.6);
     --greenOpacity60: rgba(66, 166, 42, 0.6);
     --marginBtn: 35px 0 0px 0;
-    --beigeOpacity60: rgba(195, 147, 103,0.6)
+    --beigeOpacity60: rgba(195, 147, 103,0.6);
+    --beigeOpacity80: rgba(195, 147, 103, 0.8);
+    --beigeOpacity40: rgba(195, 147, 103, 0.4);
+    --beigeOpacity20: rgba(195, 147, 103, 0.2);
+    --beigeOpacity10: rgba(195, 147, 103, 0.1);
+    --blackContent: rgba(44, 42, 41, 1);
+    --brownOpacity80: rgba(98, 59, 42, 0.8);
+    --yellowOpacity30: rgba(254, 234, 18, 0.3);
+    --lightGreenOpacity30: rgba(152, 190, 13, 0.3);
+    --redOpacity30: rgba(231, 52, 46, 0.3);
+    --redOpacity80: rgba(224, 78, 57, 0.6);
+    --greyOpacity80: (#2C2A29CC);
   }
 
   @font-face {
@@ -133,4 +144,13 @@ margin-bottom: 25px;
 
 .headers20px{
   font-size: 20px;
+}
+.container-left{
+    height: 80vh;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  
+    outline: 10px solid var(--white);
+    border-radius: 28px;
 }

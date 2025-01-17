@@ -1,5 +1,5 @@
 import "./Report.scss"
-import Search from "../../components/search/Search";
+import Search from "../../components/search-2/Search";
 import DatePicker from "../../components/datePicker/datePicker.js"
 import Table from "../../components/table/Table.js"
 import AverageCards from "../../components/AverageCards/AverageCards.js";

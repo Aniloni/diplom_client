@@ -4,6 +4,8 @@ import Paper from '@mui/material/Paper';
 import IconButton from '@mui/material/IconButton';
 import TextField from '@mui/material/TextField';
 import { styled } from '@mui/material/styles';
+import './Search.scss'
+
 const StyledTextField = styled(TextField)({
   '& label': {
     fontFamily: "PT Sans",
